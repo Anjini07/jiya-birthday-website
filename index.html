@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f8d9e8">
+  <title>For Jiya Shah ♡</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <div class="music-control">
+    <button id="musicButton" class="icon-button" aria-label="Play birthday music">♫</button>
+    <span id="musicStatus">A little soundtrack</span>
+  </div>
+  <audio id="birthdayMusic" loop>
+    <!-- Add your own royalty-free MP3 as assets/song.mp3 and keep this source. -->
+    <source src="assets/song.mp3" type="audio/mpeg">
+  </audio>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="sparkle sparkle-a">✦</div><div class="sparkle sparkle-b">✧</div>
+      <p class="eyebrow">A tiny corner of the internet, made just for you</p>
+      <h1>Happy Birthday,<br><span>Jiya Shah </span><i>♡</i></h1>
+      <h2>jij madam ji top zukifuka ma'am 😂<h2>
+      <p class="hero-copy">For my favourite human, my bestie, and one of life's very best plot twists.</p>
+      <button class="primary-button" id="startButton">There's a surprise for you <span>→</span></button>
+      <p class="scroll-note">SCROLL A LITTLE · THERE'S MORE</p>
+      <div class="hero-doodle">♡</div>
+    </section>
+
+    <section class="section intro-section reveal" id="hello">
+      <p class="eyebrow">A message before anything else</p>
+      <h2>Dear bestie,</h2>
+      <p class="letter-intro">Distance may have put a few miles between us, but it has absolutely no chance against this friendship. Today is all about celebrating you — your laugh, your madness, your kindness, and all the little things that make you <em>you</em>.</p>
+      <div class="signature">Made with a ridiculous amount of love <span>♡</span></div>
+    </section>
+
+    <section class="section memories-section reveal" id="memories">
+      <p class="eyebrow">The camera roll deserves its own museum</p>
+      <h2>Little moments, <em>big memories.</em></h2>
+      <p class="section-copy">A few snapshots from our very important history.</p>
+      <div class="photo-grid">
+
+        <div class="photo-card tilt-left">
+            <div class="photo-images">
+                <img src="assets/photo1.jpeg" alt="Memory 1">
+                <img src="assets/photo2.jpeg" alt="Memory 2">
+            </div>
+            <p class="photo-caption">Our favourite memories ♡</p>
+        </div>
+
+        <div class="photo-card tilt-right">
+            <div class="photo-images">
+                <img src="assets/photo3.jpeg" alt="Memory 3">
+                <img src="assets/photo4.jpeg" alt="Memory 4">
+            </div>
+            <p class="photo-caption">Partners in crime ✨</p>
+        </div>
+
+        <div class="photo-card tilt-left">
+            <div class="photo-images">
+                <img src="assets/photo5.jpeg" alt="Memory 5">
+                <img src="assets/photo6.jpeg" alt="Memory 6">
+            </div>
+            <p class="photo-caption">Forever besties 💗</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section reasons-section reveal" id="reasons">
+      <p class="eyebrow">A completely scientific list</p>
+      <h2>Reasons you're <em>my person.</em></h2>
+      <div class="reason-box">
+        <div class="reason-number" id="reasonNumber">01 / 06</div>
+        <p id="reasonText">You make ordinary days feel like stories worth remembering.</p>
+        <button class="round-button" id="nextReason" aria-label="Next reason">→</button>
+      </div>
+      <p class="tiny-note">Keep tapping. I have evidence.</p>
+    </section>
+
+    
+    <section class="section quiz-section reveal" id="quiz">
+      <p class="eyebrow">A little bestie challenge 🎀</p>
+
+      <h2>How well do you know <em>me?</em></h2>
+
+      <p class="section-copy">
+        Let's see how much you remember about your favourite person!
+      </p>
+
+      <div class="quiz-card">
+
+        <p class="quiz-count" id="quizCount">
+          QUESTION 1 OF 7
+        </p>
+
+        <div class="quiz-progress">
+          <div class="quiz-progress-fill" id="quizProgress"></div>
+        </div>
+
+        <h3 id="quizQuestion">
+          What's my favourite colour?
+        </h3>
+
+        <div class="quiz-options" id="quizOptions"></div>
+
+        <p class="quiz-feedback"
+          id="quizFeedback"
+          aria-live="polite"></p>
+
+      </div>
+    </section>
+
+
+    <section class="section open-section reveal" id="open">
+      <p class="eyebrow">For a day when you need a reminder</p>
+      <h2>Open when you <em>miss me.</em></h2>
+      <button class="envelope" id="envelopeButton" aria-label="Open your letter">
+        <span class="envelope-heart">♡</span><span class="envelope-label">A letter for Jiya</span><span class="envelope-hint">tap to open</span>
+      </button>
+      <div class="hidden-letter" id="hiddenLetter">
+        <p>Bestie,</p>
+        <p>If you're reading this, consider it a long-distance hug. I hope you remember that you have someone cheering for you, rooting for you, and probably laughing at a memory of us at a completely inappropriate time.</p>
+        <p>No matter how busy life gets or how far away we are, you will always have a place in my life. I hope this year brings you exciting beginnings, peaceful days, loud laughter, a lovely guy and everything you've been quietly wishing for. Hope you become an amazing pilot and give me free tickets. 😂</p>
+        <p class="signature">Always your bestie ♡</p>
+      </div>
+    </section>
+
+    <section class="section final-section reveal" id="final">
+      <div class="final-stars">✧　✦　✧</div>
+      <p class="eyebrow">One last thing, birthday girl</p>
+      <h2>May your next chapter be<br><em>your favourite one yet.</em></h2>
+      <p class="final-copy">More adventures. More laughter. More dreams coming true. And hopefully fewer kilometres between us.</p>
+      <button class="primary-button" id="confettiButton">Make a little birthday magic <span>✦</span></button>
+      <p class="final-signoff">Happy birthday, Jiya. Love you, bestie. ♡</p>
+    </section>
+  </main>
+
+  <footer>Designed with love, just for Jiya Shah · <span>♡</span></footer>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,347 @@
+:root{--pink:#f6c1d8;--pink-deep:#c65e91;--lav:#c9b9ee;--ink:#49394f;--muted:#806f86;--cream:#fff9fc;--white:#ffeeee;--shadow:0 18px 55px rgba(130,82,126,.13)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:linear-gradient(145deg,#94fb94 0%,#ffe7fd 20%,#e5d0fd 52%,#b5f6ff 100%);color:var(--ink);font-family:"DM Sans",sans-serif;overflow-x:hidden}
+.ambient{position:fixed;width:360px;height:360px;border-radius:50%;filter:blur(80px);opacity:.25;z-index:-1;pointer-events:none}.ambient-one{background:#6e1942;top:10%;left:-180px}.ambient-two{background:#cbb9f4;right:-190px;top:55%}
+.section{padding:105px 24px;max-width:1050px;margin:auto;text-align:center;position:relative}.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;align-items:center;padding-top:90px}.eyebrow{font-size:.72rem;letter-spacing:.19em;text-transform:uppercase;color:var(--pink-deep);font-weight:700;margin:0 0 20px}.hero h1{font:600 clamp(3.2rem,9vw,7rem)/1.04 "Playfair Display",serif;letter-spacing:-.045em;margin:0}.hero h1 span{color:var(--pink-deep);font-style:italic}.hero h1 i{font-size:.55em;color:#b49adf;margin-left:10px}.hero-copy{font-size: .50em; line-height:1.8;max-width:520px;color:var(--muted);margin:26px auto 30px}.primary-button{border:0;border-radius:50px;padding:16px 25px;background:linear-gradient(110deg,#e99cbe,#bba6e9);color:white;font:700 .92rem "DM Sans";box-shadow:0 10px 24px #d9b4d8aa;cursor:pointer;transition:.25s}.primary-button:hover{transform:translateY(-3px);box-shadow:0 14px 30px #c99bcaaa}.primary-button span{margin-left:12px}.scroll-note{font-size:.65rem;letter-spacing:.2em;color:#aa99ae;margin-top:75px}.sparkle{position:absolute;color:#c49bda;font-size:2rem}.sparkle-a{top:23%;left:17%}.sparkle-b{right:18%;top:31%;font-size:3rem}.hero-doodle{position:absolute;bottom:9%;right:15%;font-size:4rem;color:#efb2d0;transform:rotate(18deg)}
+h2{font:600 clamp(2.3rem,5vw,4rem)/1.12 "Playfair Display",serif;letter-spacing:-.025em;margin:0 0 22px}h2 em{color:var(--pink-deep);font-weight:500}.intro-section{max-width:760px}.letter-intro{font:1.2rem/2 "Playfair Display",serif;color:#6f5d75}.signature{font:italic 1rem "Playfair Display",serif;color:var(--pink-deep);margin-top:28px}.signature span{font-size:1.5rem}
+
+.reason-box{max-width:650px;min-height:245px;margin:38px auto 0;background:#fff9;border:1px solid #fff;box-shadow:var(--shadow);border-radius:28px;padding:40px 35px;display:flex;flex-direction:column;align-items:center;justify-content:center}.reason-number,.quiz-count{font-size:.68rem;letter-spacing:.16em;color:var(--pink-deep);font-weight:700}.reason-box p{font:clamp(1.3rem,3vw,2rem)/1.45 "Playfair Display";max-width:490px}.round-button{border:0;background:#f4d9e8;color:#a95782;width:43px;height:43px;border-radius:50%;font-size:1.3rem;cursor:pointer}
+.quiz-card{max-width:650px;margin:38px auto 0;padding:38px;background:#fff9;border:1px solid #fff;box-shadow:var(--shadow);border-radius:26px}.quiz-card h3{font:600 1.5rem "Playfair Display";margin:18px 0 24px}.quiz-options{display:grid;gap:11px}.quiz-option{border:1px solid #ead9ed;background:#fff;border-radius:14px;padding:13px;color:var(--ink);font:500 .9rem "DM Sans";cursor:pointer}.quiz-option:hover{background:#fbedf5}.quiz-option.correct{background:#e9f5ec;border-color:#b7d9bf}.quiz-option.wrong{background:#fff0f1;border-color:#f0c2c9}.quiz-feedback{min-height:24px;color:var(--pink-deep);font-size:.85rem}
+.envelope{width:min(320px,85vw);
+    height:190px;border:0;
+    border-radius:12px;
+    background:linear-gradient(135deg,#e9c0d9,#c9b9ee);
+    box-shadow:var(--shadow);position:relative;cursor:pointer;
+    color:rgb(55, 17, 17);display:flex;flex-direction:column;align-items:center;justify-content:center;margin:35px auto 0;overflow:hidden}.envelope:before{content:"";position:absolute;inset:0;background:linear-gradient(35deg,transparent 49.5%,#ffffff55 50%,transparent 50.5%),linear-gradient(-35deg,transparent 49.5%,#ffffff55 50%,transparent 50.5%)}.envelope-heart{font-size:2.7rem}.envelope-label{font:1.3rem "Playfair Display"}.envelope-hint{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;margin-top:8px}.hidden-letter{display:none;max-width:650px;margin:28px auto 0;padding:34px 38px;background:#f6feff;border-radius:18px;box-shadow:var(--shadow);text-align:left;font:1.05rem/1.9 "Playfair Display";animation:rise .5s ease}.hidden-letter.show{display:block}
+.final-section{padding-bottom:120px}.final-stars{font-size:2rem;color:#c29cdd;margin-bottom:28px}.final-copy{max-width:520px;margin:24px auto 30px;line-height:1.8;color:var(--muted)}.final-signoff{font:italic 1.2rem "Playfair Display";color:var(--pink-deep);margin-top:45px}footer{text-align:center;padding:25px;color:#a18fa5;font-size:.75rem}footer span{color:var(--pink-deep)}.music-control{position:fixed;z-index:10;top:18px;right:20px;display:flex;align-items:center;gap:9px;background:#ffffffc9;backdrop-filter:blur(12px);padding:7px 13px 7px 7px;border-radius:50px;box-shadow:0 5px 20px #8d6a8d18;color:#8b718c;font-size:.72rem}.icon-button{width:35px;height:35px;border:0;border-radius:50%;background:#f4d8e8;color:#a95782;font-size:1.2rem;cursor:pointer}.toast{position:fixed;bottom:25px;left:50%;transform:translate(-50%,20px);background:#57445e;color:white;padding:12px 20px;border-radius:30px;font-size:.8rem;opacity:0;transition:.3s;pointer-events:none;z-index:20}.toast.show{opacity:1;transform:translate(-50%,0)}.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s,transform .8s}.reveal.visible{opacity:1;transform:translateY(0)}
+@keyframes rise{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}@media(max-width:700px){.section{padding:78px 20px}.hero{min-height:92svh}.sparkle-a{left:7%;top:20%}.sparkle-b{right:7%;top:26%}.hero-doodle{right:8%;bottom:6%}.photo-grid{grid-template-columns:1fr;max-width:330px;gap:25px}.photo-card{min-height:260px}.photo-card img,.photo-placeholder{height:210px}.quiz-card{padding:28px 20px}.reason-box{padding:32px 22px}.music-control{top:12px;right:12px}.music-control span{display:none}.hidden-letter{padding:26px 24px}}
+
+
+/* ================================
+   PHOTO GALLERY
+================================ */
+
+.section-copy {
+    color: var(--muted);
+    line-height: 1.7;
+    max-width: 550px;
+    margin: 0 auto 45px;
+}
+
+/* Gallery layout */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+    max-width: 950px;
+    margin: auto;
+    padding: 15px 10px;
+}
+
+/* Individual photo cards */
+.photo-card {
+    background: #f0ffd2;
+    padding: 13px 13px 18px;
+    box-shadow: 0 8px 25px rgba(50, 40, 70, 0.13);
+    border-radius: 8px;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Hover effect */
+.photo-card:hover {
+    transform: translateY(-10px) rotate(0deg) !important;
+    box-shadow: 0 15px 30px rgba(50, 40, 70, 0.2);
+}
+
+/* Slight scrapbook rotation */
+.tilt-left {
+    transform: rotate(-3deg);
+}
+
+.tilt-right {
+    transform: rotate(3deg);
+}
+
+/* Two images inside each card */
+.photo-images {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+/* JPEG images */
+.photo-images img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    display: block;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+/* Image hover effect */
+.photo-images img:hover {
+    transform: scale(1.02);
+}
+
+/* Individual colourful placeholders, if used */
+.photo-placeholder {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(170, 234, 250);
+    font-size: 2.4rem;
+    border-radius: 5px;
+}
+
+.photo-placeholder small {
+    font-size: 0.75rem;
+    margin-top: 8px;
+}
+
+/* Different colours for each card */
+.photo-card:nth-child(1) {
+    border-top: 6px solid #ffb347;
+}
+
+.photo-card:nth-child(2) {
+    border-top: 6px solid #56ccf2;
+}
+
+.photo-card:nth-child(3) {
+    border-top: 6px solid #a8e063;
+}
+
+/* Different placeholder gradients */
+.photo-card:nth-child(1) .photo-placeholder {
+    background: linear-gradient(135deg, #ffb347, #ffcc33);
+}
+
+.photo-card:nth-child(2) .photo-placeholder {
+    background: linear-gradient(135deg, #56ccf2, #2f80ed);
+}
+
+.photo-card:nth-child(3) .photo-placeholder {
+    background: linear-gradient(135deg, #a8e063, #56ab2f);
+}
+
+/* Captions */
+.photo-caption {
+    font: italic 1.05rem "Playfair Display", serif;
+    padding-top: 15px;
+    color: #55435f;
+    text-align: center;
+    margin-top: auto;
+}
+
+/* Small note below gallery */
+.tiny-note {
+    font-size: 0.78rem;
+    color: #8d8196;
+    margin-top: 24px;
+    text-align: center;
+}
+
+/* ================================
+   RESPONSIVE DESIGN
+================================ */
+
+@media (max-width: 768px) {
+    .photo-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .photo-card {
+        min-height: 420px;
+    }
+
+    .photo-images img,
+    .photo-placeholder {
+        height: 220px;
+    }
+}
+
+@media (max-width: 500px) {
+    .photo-grid {
+        grid-template-columns: 1fr;
+        max-width: 320px;
+        gap: 30px;
+    }
+
+    .photo-card {
+        min-height: 450px;
+    }
+
+    .photo-images img,
+    .photo-placeholder {
+        height: 190px;
+    }
+}
+
+
+/* Colourful quiz result screen */
+
+.quiz-card {
+  background: linear-gradient(
+    140deg,
+    #f9cce3,
+    #9d76db,
+    #ae0f44
+  );
+  border: 2px solid white;
+  overflow: hidden;
+}
+
+.quiz-option {
+  transition: all 0.25s ease;
+}
+
+.quiz-option:hover:not(:disabled) {
+  transform: translateY(-3px);
+  background: #fce3f0;
+  border-color: #e6a5ca;
+}
+
+.quiz-option:disabled {
+  cursor: default;
+}
+
+/* Text answer box */
+
+.quiz-textbox {
+  width: 100%;
+  padding: 17px;
+  border: 2px solid #e8c9ed;
+  border-radius: 16px;
+  background: white;
+  color: #49394f;
+  font: 1rem "DM Sans", sans-serif;
+  resize: vertical;
+  outline: none;
+  margin-bottom: 12px;
+}
+
+.quiz-textbox:focus {
+  border-color: #c65e91;
+  box-shadow: 0 0 0 4px #f3b8d244;
+}
+
+.submit-answer {
+  background: linear-gradient(110deg, #edacd0, #bda8ed);
+  color: white;
+  font-weight: 700;
+}
+
+/* Result screen */
+
+.result-screen {
+  padding: 12px 0;
+  animation: resultAppear 0.8s ease;
+}
+
+.result-emoji {
+  font-size: 4rem;
+  animation: bounceEmoji 1.2s infinite alternate;
+}
+
+.score-circle {
+  width: 155px;
+  height: 155px;
+  border-radius: 50%;
+  margin: 22px auto;
+  background: linear-gradient(135deg, #f5a9cb, #bda7ef);
+  box-shadow: 0 10px 35px #d4a5e477;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border: 7px solid white;
+}
+
+.score-circle span {
+  font: 700 2.8rem "Playfair Display", serif;
+}
+
+.score-circle small {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.result-title {
+  font: 700 1.45rem "Playfair Display", serif;
+  color: #de0781;
+  margin: 22px 0 10px;
+}
+
+.result-message {
+  color: #f3dffb;
+  line-height: 1.7;
+}
+
+.result-stars {
+  color: #d59bc9;
+  font-size: 1.8rem;
+  letter-spacing: 8px;
+  margin: 20px 0;
+}
+
+.answer-keepsake {
+  margin: 25px 0;
+  padding: 22px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #ffe9f3, #eee5ff);
+  text-align: left;
+}
+
+.answer-keepsake h3 {
+  font: 600 1.25rem "Playfair Display", serif;
+  color: #a34e83;
+  text-align: center;
+}
+
+.answer-keepsake p {
+  padding: 12px;
+  background: #ffffffa8;
+  border-radius: 12px;
+  line-height: 1.7;
+  color: #6f5574;
+  overflow-wrap: anywhere;
+}
+
+.result-footer {
+  color: #ffdbf0;
+  font: italic 1.1rem "Playfair Display", serif;
+  margin: 25px 0;
+}
+
+@keyframes resultAppear {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes bounceEmoji {
+  from { transform: translateY(0) rotate(-8deg); }
+  to { transform: translateY(-10px) rotate(8deg); }
+}
+
+.quiz-feedback {
+    color: #ffffff !important;
+    font-weight: 700;
+    text-shadow: 1px 1px 3px #71345f;
+}
