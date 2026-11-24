@@ -207,6 +207,39 @@ function renderQuiz() {
   });
 }
 
+
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxzCnw0WitsiZIXvSN17oHErQ7i0_3l9CEl6nk6FbrLOAsYgcfGSN6sYDN_TE7oAYU/exec";
+
+let answersSent = false;
+
+function saveQuizAnswers() {
+    if (answersSent) return;
+
+    const quizData = {
+        name: "Jiya",
+        score: score,
+        crime: writtenAnswers[5] || "",
+        promise: writtenAnswers[6] || ""
+    };
+
+    fetch(GOOGLE_SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+            "Content-Type": "text/plain;charset=utf-8"
+        },
+        body: JSON.stringify(quizData)
+    })
+    .then(() => {
+        answersSent = true;
+        console.log("Quiz submission sent.");
+    })
+    .catch(error => {
+        console.error("Quiz submission failed:", error);
+    });
+}
+
+
 // FINAL SCORE SCREEN
 function showQuizResult() {
   const percentage = Math.round((score / 5) * 100);
@@ -282,6 +315,7 @@ function showQuizResult() {
     writtenAnswers = {};
     renderQuiz();
   });
+  saveQuizAnswers();
 }
 
 renderQuiz();
