@@ -519,3 +519,318 @@ footer {
         animation: none;
     }
 }
+
+
+/* =================================
+   INTERACTIVE BIRTHDAY CAKE
+================================= */
+
+.cake-section {
+    text-align: center;
+    overflow: hidden;
+    padding-top: 80px;
+    padding-bottom: 90px;
+}
+
+.cake-container {
+    position: relative;
+    width: 320px;
+    height: 300px;
+    margin: 35px auto 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* Cake layers */
+
+.cake {
+    position: relative;
+    width: 250px;
+    height: 165px;
+    z-index: 2;
+    animation: cakeAppear 1s ease;
+}
+
+.cake-top {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    width: 220px;
+    height: 45px;
+    border-radius: 50%;
+    background: #ffd166;
+    z-index: 3;
+}
+
+.icing {
+    position: absolute;
+    width: 100%;
+    height: 23px;
+    top: 12px;
+    border-radius: 50%;
+    background: #fff0a8;
+}
+
+.cake-middle {
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    width: 220px;
+    height: 65px;
+    background: linear-gradient(135deg, #ff9fbd, #f36c9d);
+    border-radius: 8px 8px 15px 15px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 6px solid #dc5788;
+}
+
+.cake-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 250px;
+    height: 75px;
+    background: linear-gradient(135deg, #a78bfa, #7962c7);
+    border-radius: 10px 10px 18px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 7px solid #6550a8;
+}
+
+.cake-decoration {
+    color: white;
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+}
+
+/* Cake plate */
+
+.cake-plate {
+    position: absolute;
+    bottom: -12px;
+    left: -12px;
+    width: 274px;
+    height: 18px;
+    border-radius: 50%;
+    background: linear-gradient(90deg, #b8dff5, #e6c9ff, #b8dff5);
+    z-index: -1;
+}
+
+/* Candles */
+
+.candles {
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 175px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 5;
+}
+
+.candle {
+    position: relative;
+    width: 12px;
+    height: 48px;
+    border-radius: 4px 4px 2px 2px;
+    background: repeating-linear-gradient(
+        135deg,
+        #ffffff 0px,
+        #ffffff 5px,
+        #64c9df 5px,
+        #64c9df 9px
+    );
+    box-shadow: 0 2px 5px #00000020;
+}
+
+.candle-two,
+.candle-four {
+    background: repeating-linear-gradient(
+        135deg,
+        #ffffff 0px,
+        #ffffff 5px,
+        #ff9d5c 5px,
+        #ff9d5c 9px
+    );
+}
+
+.candle-three {
+    background: repeating-linear-gradient(
+        135deg,
+        #ffffff 0px,
+        #ffffff 5px,
+        #a78bfa 5px,
+        #a78bfa 9px
+    );
+}
+
+/* Candle flames */
+
+.flame {
+    position: absolute;
+    width: 15px;
+    height: 23px;
+    top: -24px;
+    left: -1.5px;
+    background: radial-gradient(
+        ellipse at 50% 70%,
+        #fff6a5 0%,
+        #ffbd45 45%,
+        #ff7545 85%
+    );
+    border-radius: 50% 50% 45% 45%;
+    transform-origin: bottom center;
+    animation: flameFlicker 0.5s infinite alternate;
+    box-shadow: 0 0 15px #ffbd45;
+}
+
+@keyframes flameFlicker {
+    from {
+        transform: rotate(-5deg) scale(1);
+    }
+    to {
+        transform: rotate(5deg) scale(1.12);
+    }
+}
+
+/* Wish sparkles */
+
+.cake-sparkle {
+    position: absolute;
+    font-size: 2rem;
+    color: #e7ae43;
+    animation: sparkleFloat 2s ease-in-out infinite alternate;
+}
+
+.sparkle-left {
+    top: 100px;
+    left: 0;
+}
+
+.sparkle-right {
+    top: 65px;
+    right: 5px;
+    animation-delay: 0.8s;
+}
+
+@keyframes sparkleFloat {
+    from {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.5;
+    }
+    to {
+        transform: translateY(-15px) rotate(30deg);
+        opacity: 1;
+    }
+}
+
+/* Cake message */
+
+.cake-message {
+    color: #9872b5;
+    font-family: "Playfair Display", serif;
+    font-size: 1.2rem;
+    margin: 25px 0;
+}
+
+.cake-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.cake-buttons button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.cake-final-message {
+    font-family: "Playfair Display", serif;
+    font-size: 1.5rem;
+    color: #d45e9b;
+    margin-top: 25px;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: all 0.7s ease;
+}
+
+.cake-final-message.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Candles blown out */
+
+.cake-section.blown .flame {
+    animation: flameOut 0.4s forwards;
+}
+
+@keyframes flameOut {
+    to {
+        opacity: 0;
+        transform: scale(0) translateY(-15px);
+    }
+}
+
+/* Cake entrance */
+
+@keyframes cakeAppear {
+    from {
+        opacity: 0;
+        transform: translateY(35px) scale(0.85);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Cake celebration */
+
+.cake-section.blown .cake {
+    animation: cakeCelebrate 0.7s ease;
+}
+
+@keyframes cakeCelebrate {
+    0%, 100% {
+        transform: rotate(0) scale(1);
+    }
+    25% {
+        transform: rotate(-5deg) scale(1.05);
+    }
+    50% {
+        transform: rotate(5deg) scale(1.05);
+    }
+    75% {
+        transform: rotate(-3deg) scale(1.03);
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 500px) {
+    .cake-container {
+        transform: scale(0.9);
+        transform-origin: center;
+        margin-top: 20px;
+        margin-bottom: 0;
+    }
+
+    .cake-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cake-buttons button {
+        width: 90%;
+    }
+}
+
