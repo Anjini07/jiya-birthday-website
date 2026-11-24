@@ -321,6 +321,73 @@ function showQuizResult() {
 renderQuiz();
 
 
+// =================================
+// BIRTHDAY CAKE INTERACTION
+// =================================
+
+const wishButton = document.getElementById("wishButton");
+const blowButton = document.getElementById("blowButton");
+const cakeSection = document.getElementById("birthdayCake");
+const cakeMessage = document.getElementById("cakeMessage");
+const cakeFinalMessage = document.getElementById("cakeFinalMessage");
+
+let wishMade = false;
+let candlesBlown = false;
+
+// Step 1: Make a wish
+wishButton.addEventListener("click", function () {
+
+    if (wishMade) return;
+
+    wishMade = true;
+
+    cakeMessage.textContent =
+        "Your wish is safe with the universe! Make it count. ✨";
+
+    wishButton.textContent = "Wish made! ♡";
+    wishButton.disabled = true;
+
+    blowButton.disabled = false;
+
+});
+
+// Step 2: Blow out the candles
+blowButton.addEventListener("click", function () {
+
+    if (!wishMade || candlesBlown) return;
+
+    candlesBlown = true;
+
+    cakeSection.classList.add("blown");
+
+    cakeMessage.textContent =
+        "YAYYY! You did it, birthday girl! 🎉";
+
+    blowButton.textContent = "Candles blown! 🎂";
+    blowButton.disabled = true;
+
+    cakeFinalMessage.classList.add("show");
+
+    // Trigger your existing confetti function
+    if (typeof launchConfetti === "function") {
+        launchConfetti();
+    }
+
+    // Extra celebration bursts
+    setTimeout(() => {
+        if (typeof launchConfetti === "function") {
+            launchConfetti();
+        }
+    }, 500);
+
+    setTimeout(() => {
+        if (typeof launchConfetti === "function") {
+            launchConfetti();
+        }
+    }, 1000);
+
+});
+
 
 $("envelopeButton").addEventListener("click", () => {
   $("hiddenLetter").classList.toggle("show");
